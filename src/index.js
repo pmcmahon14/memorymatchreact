@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Card from './components/Card/Card';
 import * as serviceWorker from './serviceWorker';
+import 'tachyons';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 ReactDOM.render(
     <div>
