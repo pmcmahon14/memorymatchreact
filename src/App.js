@@ -1,13 +1,13 @@
 import React from 'react';
 import CardList from './CardList';
-import {images} from './Images';
+import {images} from './images';
 
 const App = () => {
     return (
         <div>
-            <Dropdown/>
+            {/*<Dropdown/>
             <Stats/>
-            <CardList/>
+            <CardList/>*/}
         </div>
     )
 };
