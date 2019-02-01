@@ -5,7 +5,9 @@ import {images} from './Images';
 const App = () => {
     return (
         <div>
-
+            <Dropdown/>
+            <Stats/>
+            <CardList/>
         </div>
     )
 };
