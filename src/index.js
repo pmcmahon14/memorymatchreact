@@ -5,7 +5,7 @@ import './index.css';
 import CardList from './CardList';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import 'bootstrap/dist/css/bootstrap.min.css';
+//import Button from 'react-bootstrap/Button';
 import {images} from './images';
 
 ReactDOM.render(
