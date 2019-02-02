@@ -1,15 +1,13 @@
 import React from 'react';
 import Card from './Card';
-import Col from 'react-bootstrap/Col';
 
 const CardList = ({images}) => {
     return (
-        <div>
-            <Col xs={2}>
+        <div className='card'>
             {
                 images.map((user, i) => {
                     return (
-                        <Card xs={2}
+                        <Card
                             key={i}
                             driver={images[i].driver}
                             car={images[i].car}
@@ -17,7 +15,6 @@ const CardList = ({images}) => {
                     )
                 })
             }
-        </Col>
         </div>
     )
 };
