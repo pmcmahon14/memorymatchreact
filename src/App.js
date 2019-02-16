@@ -7,7 +7,7 @@ const App = () => {
         <div>
             {/*<Dropdown/>
             <Stats/>
-            <CardList/>*/}
+            <Card/>*/}
         </div>
     )
 };

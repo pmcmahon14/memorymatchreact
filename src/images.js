@@ -162,7 +162,7 @@ export const images =
     },
     {
         id: 33,
-        driver: 'imagebank/darrellwallace.png',
+        driver: 'imagebank/bubbawallace.png',
         car: '43'
     }
 ];
