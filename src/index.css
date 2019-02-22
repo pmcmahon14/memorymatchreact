@@ -14,5 +14,11 @@ code {
 }
 
 .card {
-    width: 15%;
+    width: 135px;
+}
+
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
 }
