@@ -7,6 +7,7 @@ const App = () => {
         <div>
             {/*<Dropdown/>
             <Stats/>
+            <Reset/>
             <Card/>*/}
         </div>
     )

@@ -1,20 +1,19 @@
 import React from 'react';
 import Card from './Card';
+import {Container, Row, Col} from 'reactstrap';
 
 const CardList = ({images}) => {
+    const cardArray = images.map((user, i) => {
+        return <Card
+            driver={images[i].driver}
+            car={images[i].car}
+        />
+    });
     return (
-        <div className='fl w-20'>
-            {
-                images.map((user, i) => {
-                    return (
-                        <Card
-                            key={i}
-                            driver={images[i].driver}
-                            car={images[i].car}
-                        />
-                    )
-                })
-            }
+        <div>
+            <Col xs='2'>
+            {cardArray}
+            </Col>
         </div>
     )
 };
