@@ -7,7 +7,7 @@ const Card = ({driver}) => {
     return (
         <Container fluid>
             {/*tachyons here only for development*/}
-        <div className='tc dib br3 pa3 ma2 grow bw2 shadow-5'>
+        <div className='tc dib br3 ma2 grow bw2 shadow-5'>
             <Row>
                 <Col xs="2">
                     <div>
