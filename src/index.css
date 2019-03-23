@@ -13,8 +13,8 @@ code {
     monospace;
 }
 
-.card {
-    width: 135px;
+img {
+    max-width: 100%;
 }
 
 .back{
@@ -22,3 +22,6 @@ code {
     top: 0;
     left: 0;
 }
+
+
+
