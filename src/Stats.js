@@ -33,20 +33,16 @@ class Stats extends Component {
                         </Dropdown>
                     </Col>
                     <Col>
-                        <p>Matches</p>
-                        <p>0</p>
+                        <p>Matches<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Attempts</p>
-                        <p>0</p>
+                        <p>Attempts<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Accuracy</p>
-                        <p>0</p>
+                        <p>Accuracy<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Wins</p>
-                        <p>0</p>
+                        <p>Wins<br/>0</p>
                     </Col>
                     <Col>
                         <button type='button' class='btn btn-danger'>Reset</button>
