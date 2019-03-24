@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Card from './Card';
+import Gameboard from './Gameboard';
 //import CardList from './CardList';
 //import {images} from './images';
 import Timer from './Timer';
@@ -11,7 +11,7 @@ class App extends Component {
             <div>
                 <Stats/>
                 <Timer/>
-                <Card/>
+                <Gameboard/>
             </div>
         )
     }

@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import './index.css';
 
-class Card extends Component {
+class Gameboard extends Component {
     render () {
         return (
             <div>
@@ -75,4 +75,4 @@ class Card extends Component {
     }
 };
 
-export default Card;
+export default Gameboard;
