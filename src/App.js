@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Gameboard from './Gameboard';
+import Gameboard from './components/Gameboard/Gameboard';
 //import CardList from './CardList';
 //import {images} from './images';
 import Timer from './Timer';
