@@ -1,15 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom';
-import {Container, Row, Col} from 'reactstrap';
-
 import App from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import './index.css';
-import Card from './Card';
 import * as serviceWorker from './serviceWorker';
 import 'tachyons';
-import {images} from './images';
+//import {images} from './images';
 
 ReactDOM.render(
     <App/>

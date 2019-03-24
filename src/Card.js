@@ -8,64 +8,65 @@ class Card extends Component {
             <div>
                 <Container fluid>
                 <Row>
-                    <Col>
+                    <Col className='grow'>
                         <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
                         <img className='back' alt='cardback' src={require('./imagebank/logo.png')}/>
                     </Col>
-                    <Col>
+                    <Col className='grow'>
                         <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+
                     </Col>
-                    <Col>
-                        <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                    <Col className='grow'>
+                        <img className='front' alt='card' src={require('./imagebank/drivers/chaseelliott.png')}/>
                     </Col>
-                    <Col>
-                        <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                    <Col className='grow'>
+                        <img className='front' alt='card' src={require('./imagebank/drivers/chaseelliott.png')}/>
                     </Col>
-                    <Col>
-                        <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                    <Col className='grow'>
+                        <img className='front' alt='card' src={require('./imagebank/drivers/jimmiejohnson.png')}/>
                     </Col>
-                    <Col>
-                        <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                    <Col className='grow'>
+                        <img className='front' alt='card' src={require('./imagebank/drivers/jimmiejohnson.png')}/>
                     </Col>
                 </Row>
                     <Row>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/austindillon.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/austindillon.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/kevinharvick.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/kevinharvick.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/martintruex.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/martintruex.png')}/>
                         </Col>
                     </Row>
                     <Row>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/joeylogano.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/joeylogano.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/tydillon.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/tydillon.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/aricalmirola.png')}/>
                         </Col>
-                        <Col>
-                            <img className='front' alt='card' src={require('./imagebank/drivers/alexbowman.png')}/>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('./imagebank/drivers/aricalmirola.png')}/>
                         </Col>
                     </Row>
                 </Container>
