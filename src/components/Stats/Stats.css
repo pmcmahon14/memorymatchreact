@@ -1,4 +1,6 @@
 .stats {
     text-align: center;
+    /*TODO ADJUST FONT SIZE FOR DIFFERENT SIZE SCREENS*/
+    font-size: .75em;
 }
 

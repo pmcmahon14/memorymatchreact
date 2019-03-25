@@ -22,7 +22,7 @@ class Stats extends Component {
             <Container fluid>
                 <Row>
                     <Col className='stats'>
-                        <Dropdown group isOpen={this.state.dropdownOpen} size="md" toggle={this.toggle}>                        <DropdownToggle caret>Menu</DropdownToggle>
+                        <Dropdown group isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>                        <DropdownToggle caret>Menu</DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem tag='a' href='#'>Daytona Easy</DropdownItem>
                             <DropdownItem tag='a' href='#'>Daytona Hard</DropdownItem>
@@ -46,7 +46,7 @@ class Stats extends Component {
                         <p className='stats'>Wins<br/>0</p>
                     </Col>
                     <Col className='stats'>
-                        <button type='button' class='btn btn-danger'>Reset</button>
+                        <button type='button' className='btn btn-danger btn-sm'>Reset</button>
                     </Col>
 
                 </Row>
