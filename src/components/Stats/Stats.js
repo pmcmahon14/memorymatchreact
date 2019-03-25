@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
-
+import './Stats.css';
+//TODO FIX PROBLEM WITH BUTTON SIZING UPON CHANGING SCREEN SIZES
 class Stats extends Component {
     constructor(props) {
         super(props);
@@ -20,7 +21,7 @@ class Stats extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col>
+                    <Col className='stats'>
                         <Dropdown group isOpen={this.state.dropdownOpen} size="md" toggle={this.toggle}>                        <DropdownToggle caret>Menu</DropdownToggle>
                         <DropdownMenu>
                             <DropdownItem tag='a' href='#'>Daytona Easy</DropdownItem>
@@ -33,18 +34,18 @@ class Stats extends Component {
                         </Dropdown>
                     </Col>
                     <Col>
-                        <p>Matches<br/>0</p>
+                        <p className='stats'>Matches<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Attempts<br/>0</p>
+                        <p className='stats'>Attempts<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Accuracy<br/>0</p>
+                        <p className='stats'>Accuracy<br/>0</p>
                     </Col>
                     <Col>
-                        <p>Wins<br/>0</p>
+                        <p className='stats'>Wins<br/>0</p>
                     </Col>
-                    <Col>
+                    <Col className='stats'>
                         <button type='button' class='btn btn-danger'>Reset</button>
                     </Col>
 
