@@ -1,37 +1,26 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from 'reactstrap';
+
+import {Container, Row, Col} from 'reactstrap';
+import Menu from '../../Container/Menu/Menu';
 import './Stats.css';
-//TODO FIX PROBLEM WITH BUTTON SIZING UPON CHANGING SCREEN SIZES
-class Stats extends Component {
-    constructor(props) {
-        super(props);
 
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            dropdownOpen: false
-        };
-    }
+class stats extends Component {
+    state = {
+        stats: {
+            matches: 0,
+            attempts: 0,
+            accuracy: 0,
+            wins: 0,
+            /*other stats in pop-up*/
+        }
+    };
 
-    toggle() {
-        this.setState({
-            dropdownOpen: !this.state.dropdownOpen
-        });
-    }
     render () {
         return (
             <Container fluid>
                 <Row>
                     <Col className='stats'>
-                        <Dropdown group isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>                        <DropdownToggle caret>Menu</DropdownToggle>
-                        <DropdownMenu>
-                            <DropdownItem tag='a' href='#'>Daytona Easy</DropdownItem>
-                            <DropdownItem tag='a' href='#'>Daytona Hard</DropdownItem>
-                            <DropdownItem tag='a' href='#'>Charlotte Easy</DropdownItem>
-                            <DropdownItem tag='a' href='#'>Charlotte Hard</DropdownItem>
-                            <DropdownItem tag='a' href='#'>Bristol Easy</DropdownItem>
-                            <DropdownItem tag='a' href='#'>Bristol Hard</DropdownItem>
-                        </DropdownMenu>
-                        </Dropdown>
+                        <Menu/>
                     </Col>
                     <Col>
                         <p className='stats'>Matches<br/>0</p>
@@ -55,4 +44,4 @@ class Stats extends Component {
     }
 };
 
-export default Stats;
+export default stats;

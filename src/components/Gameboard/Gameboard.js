@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import '../../index.css';
 
-class Gameboard extends Component {
+
+
+class gameboard extends Component {
     render () {
         return (
             <div>
@@ -14,7 +16,7 @@ class Gameboard extends Component {
                     </Col>
                     <Col className='grow'>
                         <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
-
+                        <img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>
                     </Col>
                     <Col className='grow'>
                         <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
@@ -75,4 +77,4 @@ class Gameboard extends Component {
     }
 };
 
-export default Gameboard;
+export default gameboard;

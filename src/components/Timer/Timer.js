@@ -1,7 +1,10 @@
 import React, {Component} from 'react';
 import './Timer.css';
 
-class Timer extends Component {
+
+
+
+class timer extends Component {
     render() {
         return (
             <div className='Timer'>
@@ -11,4 +14,4 @@ class Timer extends Component {
     }
 }
 
-export default Timer;
+export default timer;
