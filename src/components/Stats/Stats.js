@@ -37,11 +37,10 @@ class stats extends Component {
                     <Col className='stats'>
                         <button type='button' className='btn btn-danger btn-sm'>Reset</button>
                     </Col>
-
                 </Row>
             </Container>
         )
     }
-};
+}
 
 export default stats;
