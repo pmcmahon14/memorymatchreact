@@ -2,6 +2,7 @@ import React from 'react';
 
 import Timer from '../../Components/Timer/Timer';
 import Stats from '../../Components/Stats/Stats';
+import Title from '../../Components/Title/Title';
 import Gameboard from '../../Components/Gameboard/Gameboard';
 import Fragment from '../../hoc/Fragment/Fragment';
 import Background from "../../Components/Background/Background";
@@ -12,6 +13,7 @@ const Layout = (props) => (
         <div className={classes.mainboard}>
             <Stats/>
             <Timer/>
+            <Title/>
             <Gameboard/>
         </div>
     </Fragment>

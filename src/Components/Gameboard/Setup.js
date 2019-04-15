@@ -3,30 +3,31 @@ import PropTypes from 'prop-types';
 
 class Setup extends Component {
     render () {
-        let gameboard = 'daytonaD/D';
+        let gamelevel = 'daytonaD/D';
 
         switch (this.props.type) {
             case ('daytonaD/D'):
-                gameboard = <div><p>Daytonadriver</p></div>;
+                gamelevel = <div>Daytona Driver/Driver</div>;
                 break;
             case ('charlotteD/D'):
-                gameboard = <div><p>Charlottedriver</p></div>;
+                gamelevel = <div>Charlotte Driver/Driver</div>;
                 break;
             case ('bristolD/D'):
-                gameboard = <div><p>Bristoldriver</p></div>;
+                gamelevel = <div>Bristol Driver/Driver</div>;
                 break;
             case ('daytonaD/C'):
-                gameboard = <div><p>Daytonacar</p></div>;
+                gamelevel = <div>Daytona Driver/Car</div>;
                 break;
             case ('charlotteD/C'):
-                gameboard = <div><p>Charlottecar</p></div>;
+                gamelevel = <div>Charlotte Driver/Car</div>;
                 break;
             case ('bristolD/C'):
-                gameboard = <div><p>Bristolcar</p></div>;
+                gamelevel = <div>Bristol Driver/Car</div>;
                 break;
             default:
-                gameboard = null;
+                gamelevel = null;
         }
+        return gamelevel;
     }
 }
 
