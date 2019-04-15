@@ -1,10 +1,11 @@
 import React from 'react';
 
 import Setup from '../Gameboard/Setup';
+import classes from './Title.module.css';
 
 const title = (props) => {
     return (
-        <div>
+        <div className={classes.Title}>
             <Setup type='daytonaD/D'/>
             <Setup type='charlotteD/D'/>
             <Setup type='bristolD/D'/>
