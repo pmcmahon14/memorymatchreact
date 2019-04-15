@@ -1,0 +1,11 @@
+.back{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height:100%;
+    width: 90%;
+}
+
+img {
+    max-width: 90%;
+}

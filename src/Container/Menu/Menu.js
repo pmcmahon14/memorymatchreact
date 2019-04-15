@@ -30,7 +30,7 @@ class menu extends Component {
                     <DropdownItem type='bristolD/D' href='#'>Bristol Driver/Driver</DropdownItem>
                     <DropdownItem type='daytonaD/C' href='#'>Daytona Driver/Car</DropdownItem>
                     <DropdownItem type='charlotteD/C' href='#'>Charlotte Driver/Car</DropdownItem>
-                    <DropdownItem tag='bristolD/C' href='#'>Bristol Driver/Car</DropdownItem>
+                    <DropdownItem type='bristolD/C' href='#'>Bristol Driver/Car</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
         )
