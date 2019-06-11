@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import {Container, Row, Col} from 'reactstrap';
 import Menu from '../../Container/Menu/Menu';
-import './Stats.css';
+import classes from './Stats.module.css';
 
 class stats extends Component {
     state = {
@@ -19,22 +19,22 @@ class stats extends Component {
         return (
             <Container fluid>
                 <Row>
-                    <Col className='stats'>
+                    <Col className={classes.stats}>
                         <Menu/>
                     </Col>
                     <Col>
-                        <p className='stats'>Matches<br/>0</p>
+                        <p className={classes.stats}>Matches<br/>0</p>
                     </Col>
                     <Col>
-                        <p className='stats'>Attempts<br/>0</p>
+                        <p className={classes.stats}>Attempts<br/>0</p>
                     </Col>
                     <Col>
-                        <p className='stats'>Accuracy<br/>0</p>
+                        <p className={classes.stats}>Accuracy<br/>0</p>
                     </Col>
                     <Col>
-                        <p className='stats'>Wins<br/>0</p>
+                        <p className={classes.stats}>Wins<br/>0</p>
                     </Col>
-                    <Col className='stats'>
+                    <Col className={classes.stats}>
                         <button type='button' className='btn btn-danger btn-sm'>Reset</button>
                     </Col>
                 </Row>

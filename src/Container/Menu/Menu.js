@@ -25,12 +25,13 @@ class menu extends Component {
             <Dropdown group isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
                 <DropdownToggle caret>Menu</DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem type='daytonaD/D' href='#'>Daytona Driver/Driver</DropdownItem>
-                    <DropdownItem type='charlotteD/D' href='#'>Charlotte Driver/Driver</DropdownItem>
-                    <DropdownItem type='bristolD/D' href='#'>Bristol Driver/Driver</DropdownItem>
-                    <DropdownItem type='daytonaD/C' href='#'>Daytona Driver/Car</DropdownItem>
-                    <DropdownItem type='charlotteD/C' href='#'>Charlotte Driver/Car</DropdownItem>
-                    <DropdownItem type='bristolD/C' href='#'>Bristol Driver/Car</DropdownItem>
+                    <DropdownItem type='daytonaDriver' value='daytonaDriver' href='#'>Daytona Driver/Driver</DropdownItem>
+                    <DropdownItem type='charlotteDriver' value='charlotteDriver' href='#'>Charlotte Driver/Driver</DropdownItem>
+                    <DropdownItem type='bristolDriver' value='bristolDriver' href='#'>Bristol Driver/Driver</DropdownItem>
+                    <DropdownItem type='daytonaCar' value='daytonaCar' href='#'>Daytona Driver/Car</DropdownItem>
+                    <DropdownItem type='charlotteCar' value='charlotteCar' href='#'>Charlotte Driver/Car</DropdownItem>
+                    <DropdownItem type='bristolCar' value='bristolCar' href='#'>Bristol Driver/Car</DropdownItem>
+                    <DropdownItem type='fullStats' value='fullStats' href='#'>Stats</DropdownItem>
                 </DropdownMenu>
             </Dropdown>
         )

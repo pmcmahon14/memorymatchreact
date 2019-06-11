@@ -1,40 +1,42 @@
 import React, {Component} from 'react';
+
 import PropTypes from 'prop-types';
+
+//const gameLevel = document.querySelector("DropdownMenu");
+//console.log(gameLevel);
+let gamelevel = 'daytonaDriver';
+console.log(gamelevel);
+
 
 class Setup extends Component {
     render () {
-        let gamelevel = 'daytonaD/D';
         let cards = 18;
+        console.log(gamelevel);
 
         switch (this.props.type) {
-            case ('daytonaD/D'):
-                gamelevel = <div>Daytona Driver/Driver</div>;
+            case ('daytonaDriver'):
                 cards = 18;
-                break;
-            case ('charlotteD/D'):
-                gamelevel = <div>Charlotte Driver/Driver</div>;
+                return (<div>Daytona Driver/Driver</div>);
+            case ('charlotteDriver'):
                 cards = 12;
-                break;
-            case ('bristolD/D'):
-                gamelevel = <div>Bristol Driver/Driver</div>;
+                return (<div>Charlotte Driver/Driver</div>);
+            case ('bristolDriver'):
                 cards = 8;
-                break;
-            case ('daytonaD/C'):
-                gamelevel = <div>Daytona Driver/Car</div>;
+                return (<div>Bristol Driver/Driver</div>);
+            case ('daytonaCar'):
                 cards = 18;
-                break;
-            case ('charlotteD/C'):
-                gamelevel = <div>Charlotte Driver/Car</div>;
+                return (<div>Daytona Driver/Car</div>);
+            case ('charlotteCar'):
                 cards = 12;
-                break;
-            case ('bristolD/C'):
-                gamelevel = <div>Bristol Driver/Car</div>;
+                return (<div>Charlotte Driver/Car</div>);
+            case ('bristolCar'):
                 cards = 8;
-                break;
+                return (<div>Bristol Driver/Car</div>);
             default:
                 gamelevel = null;
         }
-        return gamelevel;
+        console.log(gamelevel, cards);
+        return [cards];
     }
 }
 

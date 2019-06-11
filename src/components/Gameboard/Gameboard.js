@@ -1,22 +1,25 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 import './Gameboard.css';
+import classes from './Gameboard.css';
 
 
 
 class gameboard extends Component {
+
+
     render () {
         return (
             <div>
                 <Container fluid>
-                <Row>
+                <Row className={classes.rowDaytona}>
                     <Col className='grow'>
                         <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
-                        <img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>
+                        {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
                     </Col>
                     <Col className='grow'>
                         <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
-                        <img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>
+                        {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
                     </Col>
                     <Col className='grow'>
                         <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
