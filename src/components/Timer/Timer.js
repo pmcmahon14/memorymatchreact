@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import './Timer.css';
+import classes from './Timer.module.css';
 
 
 
@@ -7,7 +7,7 @@ import './Timer.css';
 class timer extends Component {
     render() {
         return (
-            <div className='Timer'>
+            <div className={classes.Timer}>
                 <p id='timer'>50</p>
             </div>
         )

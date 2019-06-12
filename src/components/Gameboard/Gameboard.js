@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
-import './Gameboard.css';
-import classes from './Gameboard.css';
+import './Gameboard.module.css';
+import classes from './Gameboard.module.css';
 
 
 
