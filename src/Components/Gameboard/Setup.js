@@ -5,11 +5,13 @@ import Menu from '../../Container/Menu/Menu';
 
 //const gameLevel = document.querySelector("DropdownItem");
 
+//preliminary switch statement for each of six levels plus stats page using class
 class Setup extends Component {
     render () {
+        //set gamelevel var to Daytona Driver/Driver to start session; may be changed later
         let gamelevel = <div>Daytona Driver/Driver</div>;
         console.log(gamelevel);
-
+        //set cards and colwidth to 18 and 2 for above set level; each will be changed according to menu selection
         let cards = 18;
         let colWidth = 2;
         console.log(gamelevel);
@@ -54,6 +56,7 @@ class Setup extends Component {
     }
 }
 
+//propTypes validation for switch result, is always string
 Setup.propTypes = {
     type: PropTypes.string.isRequired
 };
