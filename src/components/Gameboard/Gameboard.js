@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
-import './Gameboard.module.css';
+
 import classes from './Gameboard.module.css';
 
 
@@ -12,28 +12,28 @@ class gameboard extends Component {
         return (
             <div>
                 <Container fluid>
-                <Row className={classes.rowDaytona}>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
-                        {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
-                    </Col>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
-                        {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
-                    </Col>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
-                    </Col>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
-                    </Col>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/jimmiejohnson.png')}/>
-                    </Col>
-                    <Col className='grow'>
-                        <img className='front' alt='card' src={require('../../imagebank/drivers/jimmiejohnson.png')}/>
-                    </Col>
-                </Row>
+                    <Row className={classes.rowDaytona}>
+                        <Col className='grow'>
+                            <img className={classes.front} alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
+                            {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
+                        </Col>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
+                            <img className={classes.back} alt='cardback' src={require('../../imagebank/logo.png')}/>
+                        </Col>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
+                        </Col>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
+                        </Col>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('../../imagebank/drivers/jimmiejohnson.png')}/>
+                        </Col>
+                        <Col className='grow'>
+                            <img className='front' alt='card' src={require('../../imagebank/drivers/jimmiejohnson.png')}/>
+                        </Col>
+                    </Row>
                     <Row>
                         <Col className='grow'>
                             <img className='front' alt='card' src={require('../../imagebank/drivers/austindillon.png')}/>

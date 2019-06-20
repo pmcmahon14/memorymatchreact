@@ -1,15 +1,35 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export const card = () => {
+import './Card.module.css';
+
+export default function card({
+    handleClick,
+    id,
+    flipped,
+    back,
+    front
+}) {
     return (
-        <div>
-            id={n}
-            front={require('../../imagebank/drivers/alexbowman.png')}
-            back={require('../../imagebank/logo.png')}
-            flipped={flipped.includes(1)}
-            handleClick={() => handleClick(1)}
+        <div
+        className={`flip-container ${flipped ? 'flipped' : ''}`}
+        onClick={() => handleClick(id)}
+        >
+            <div className='flipper'>
+            <img
+                alt='card'
+                className={flipped ? 'front' : 'back'}
+                src={flipped ? front : back}
+            />
+            </div>
         </div>
     )
 };
 
-//export default card;
+card.propTypes = {
+    handleClick: PropTypes.func.isRequired,
+    id: PropTypes.number.isRequired,
+    flipped: PropTypes.bool.isRequired,
+    back: PropTypes.string.isRequired,
+    front: PropTypes.string.isRequired,
+};
