@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import PropTypes from 'prop-types';
-import Menu from '../../Container/Menu/Menu';
+//import Menu from '../../Container/Menu/Menu';
 
 //const gameLevel = document.querySelector("DropdownItem");
 
@@ -9,50 +9,52 @@ import Menu from '../../Container/Menu/Menu';
 class Setup extends Component {
     render () {
         //set gamelevel var to Daytona Driver/Driver to start session; may be changed later
-        let gamelevel = <div>Daytona Driver/Driver</div>;
-        console.log(gamelevel);
+        //<div> or a string?
+        let gameLevel = <div>Daytona Driver/Driver</div>;
+        console.log(gameLevel);
         //set cards and colwidth to 18 and 2 for above set level; each will be changed according to menu selection
         let cards = 18;
         let colWidth = 2;
-        console.log(gamelevel);
+        console.log(gameLevel);
         switch (this.props.type) {
             case ('daytonaDriver'):
                 //cards = 18;
                 //colWidth = 2;
-                gamelevel = <div>Daytona Driver/Driver</div>;
+                gameLevel = <div>Daytona Driver/Driver</div>;
                 break;
             case ('charlotteDriver'):
                 //cards = 12;
                 //colWidth = 3;
-                gamelevel = <div>Charlotte Driver/Driver</div>;
+                gameLevel = <div>Charlotte Driver/Driver</div>;
                 break;
             case ('bristolDriver'):
                 //cards = 8;
                 //colWidth = 3;
-                gamelevel = <div>Bristol Driver/Driver</div>;
+                gameLevel = <div>Bristol Driver/Driver</div>;
                 break;
             case ('daytonaCar'):
                 //cards = 18;
                 //colWidth = 2;
-                gamelevel = <div>Daytona Driver/Car</div>;
+                gameLevel = <div>Daytona Driver/Car</div>;
                 break;
             case ('charlotteCar'):
                 //cards = 12;
                 //colWidth = 3;
-                gamelevel = <div>Charlotte Driver/Car</div>;
+                gameLevel = <div>Charlotte Driver/Car</div>;
                 break;
             case ('bristolCar'):
                 //cards = 8;
                 //colWidth = 3;
-                gamelevel = <div>Bristol Driver/Car</div>;
+                gameLevel = <div>Bristol Driver/Car</div>;
                 break;
             case ('stats'):
-                //statspage;
+            //statspage;
+                break;
             default:
-                gamelevel = null;
+                gameLevel = null;
         }
-        console.log(gamelevel, cards, colWidth);
-        return [gamelevel];
+        console.log(gameLevel, cards, colWidth);
+        return [gameLevel]
     }
 }
 

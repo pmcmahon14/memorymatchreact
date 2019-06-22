@@ -39,15 +39,11 @@ class menu extends Component {
                 <DropdownMenu>
                     {/*map through levels array to generate menu*/}
                     {levels.map(lev => (
-                        <BuildMenu key={lev.label} label={lev.label}/>
+                        <BuildMenu
+                            key={lev.label}
+                            label={lev.label}
+                        />
                     ))}
-                    {/*<DropdownItem type='daytonaDriver' value='daytonaDriver' >Daytona Driver/Driver</DropdownItem>
-                    <DropdownItem type='charlotteDriver' value='charlotteDriver' href='../../Components/Gameboard/Setup'>Charlotte Driver/Driver</DropdownItem>
-                    <DropdownItem type='bristolDriver' value='bristolDriver' >Bristol Driver/Driver</DropdownItem>
-                    <DropdownItem type='daytonaCar' value='daytonaCar' >Daytona Driver/Car</DropdownItem>
-                    <DropdownItem type='charlotteCar' value='charlotteCar' >Charlotte Driver/Car</DropdownItem>
-                    <DropdownItem type='bristolCar' value='bristolCar' >Bristol Driver/Car</DropdownItem>
-                    <DropdownItem type='fullStats' value='fullStats' >Stats</DropdownItem>*/}
                 </DropdownMenu>
             </Dropdown>
         )

@@ -1,16 +1,20 @@
 import React, {Component} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 
+import Timer from './Timer/Timer';
+import Title from './Title/Title';
 import classes from './Gameboard.module.css';
 
 
 
-class gameboard extends Component {
+class Gameboard extends Component {
 
 
     render () {
         return (
             <div>
+                <Timer/>
+                <Title/>
                 <Container fluid>
                     <Row className={classes.rowDaytona}>
                         <Col className='grow'>
@@ -80,4 +84,4 @@ class gameboard extends Component {
     }
 };
 
-export default gameboard;
+export default Gameboard;
