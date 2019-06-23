@@ -8,13 +8,53 @@ import classes from './Gameboard.module.css';
 
 
 class Gameboard extends Component {
-
-
+    state = {
+        /*levels: {
+            daytonaDriver: {
+                cards: 18,
+                colWidth: 2,
+                gameLevel: 'Daytona Driver/Driver'
+            },
+            charlotteDriver: {
+                cards: 12,
+                colWidth: 3,
+                gameLevel: 'Charlotte Driver/Driver'
+            },
+            bristolDriver: {
+                cards: 8,
+                colWidth: 3,
+                gameLevel: 'Bristol Driver/Driver'
+            },
+            daytonaCar: {
+                cards: 18,
+                colWidth: 2,
+                gameLevel: 'Daytona Driver/Car'
+            },
+            charlotteCar: {
+                cards: 12,
+                colWidth: 3,
+                gameLevel: 'Charlotte Driver/Car'
+            },
+            bristolCar: {
+                cards: 8,
+                colWidth: 3,
+                gameLevel: 'Bristol Driver/Car'
+            },
+        }*/
+        levels: {
+            daytonaDriver: 'Daytona Driver/Driver',
+            charlotteDriver: 0,
+            bristolDriver: 0,
+            daytonaCar: 0,
+            charlotteCar: 0,
+            bristolCar: 0
+        }
+    };
     render () {
         return (
             <div>
                 <Timer/>
-                <Title/>
+                <Title levels={this.state.levels}/>
                 <Container fluid>
                     <Row className={classes.rowDaytona}>
                         <Col className='grow'>

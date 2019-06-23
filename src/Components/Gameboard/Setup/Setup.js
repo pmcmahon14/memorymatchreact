@@ -16,6 +16,7 @@ class Setup extends Component {
         let cards = 18;
         let colWidth = 2;
         console.log(gameLevel);
+        //set var = to (this.props.type) then var = type for if/else?
         switch (this.props.type) {
             case ('daytonaDriver'):
                 //cards = 18;
@@ -55,12 +56,43 @@ class Setup extends Component {
         }
         console.log(gameLevel, cards, colWidth);
         return [gameLevel]
+        /*const level = (this.props.type);
+        if (level === 'daytonaDriver') {
+            gameLevel = <div>Daytona Driver/Driver</div>;
+            cards = 18;
+            colWidth = 2;
+        } else if (level === 'charlotteDriver') {
+            gameLevel = <div>Charlotte Driver/Driver</div>;
+            cards = 12;
+            colWidth = 3;
+            gameLevel = <div>Charlotte Driver/Driver</div>;
+        } else if (level === 'bristolDriver') {
+            gameLevel = <div>Bristol Driver/Driver</div>;
+            cards = 8;
+            colWidth = 3;
+        } else if (level === 'daytonaCar') {
+            gameLevel = <div>Daytona Driver/Car</div>;
+            cards = 18;
+            colWidth = 2;
+        } else if (level === 'charlotteCar') {
+            gameLevel = <div>Charlotte Driver/Car</div>;
+            cards = 12;
+            colWidth = 3;
+        } else if (level === 'bristolCar') {
+            gameLevel = <div>Bristol Driver/Car</div>;
+            cards = 8;
+            colWidth = 3;
+        } else {
+            console.log(gameLevel, cards, colWidth);
+        }
+        console.log(gameLevel, cards, colWidth);
+        return [gameLevel]*/
     }
 }
 
 //propTypes validation for switch result, is always string
 Setup.propTypes = {
-    type: PropTypes.string.isRequired
+    level: PropTypes.string.isRequired
 };
 
 export default Setup;
