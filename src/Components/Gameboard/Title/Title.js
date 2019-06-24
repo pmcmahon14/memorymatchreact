@@ -8,9 +8,7 @@ import classes from './Title.module.css';
 const title = (props) => {
     const changeLevel = Object.keys(props.levels)
         .map(clKey => {
-            return [...Array(props.levels[clKey])].map((_, i) => {
-                return <Setup key={clKey} type={clKey} />;//clKey+1
-            });
+            return [...Array(props.levels[clKey])].slice(0,1);
         });
     console.log(changeLevel);
     return (
