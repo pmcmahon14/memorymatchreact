@@ -1,10 +1,11 @@
-import React, {Component} from 'react';
+import React from 'react';
 
-import {Dropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
+import {UncontrolledDropdown, DropdownToggle, DropdownMenu} from 'reactstrap';
 import BuildMenu from './BuildMenu/BuildMenu';
 
 //label and type object array to generate menu
 //type must be same as case in switch statement
+
 const levels = [
     {label: 'Daytona Driver/Driver', type: 'daytonaDriver'},
     {label: 'Charlotte Driver/Driver', type: 'charlotteDriver'},
@@ -15,26 +16,9 @@ const levels = [
     {label: 'Stats', type: 'stats'}
 ];
 
-class menu extends Component {
-
-    constructor(props) {
-        super(props);
-        this.toggle = this.toggle.bind(this);
-        this.state = {
-            dropdownOpen: false
-        };
-    }
-
-    toggle() {
-        this.setState({
-            dropdownOpen: !this.state.dropdownOpen
-        });
-    }
-
+const menu = (props) => (
     //render menu in Bootstrap 4 button with Dropdown props from reactstrap
-    render () {
-        return (
-            <Dropdown group isOpen={this.state.dropdownOpen} size="sm" toggle={this.toggle}>
+            <UncontrolledDropdown size="sm">
                 <DropdownToggle caret>Menu</DropdownToggle>
                 <DropdownMenu>
                     {/*map through levels array to generate menu*/}
@@ -42,12 +26,12 @@ class menu extends Component {
                         <BuildMenu
                             key={lev.label}
                             label={lev.label}
+                            changedLevel={() => props.changed(lev.type)}
                         />
                     ))}
                 </DropdownMenu>
-            </Dropdown>
-        )
-    }
-}
+            </UncontrolledDropdown>
+        );
+
 
 export default menu;

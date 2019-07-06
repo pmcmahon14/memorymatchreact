@@ -8,11 +8,13 @@ class timer extends Component {
     render() {
         return (
             <div className={classes.Timer}>
-                <p id='timer'>50</p>
+                <p id='timer'>0/50</p>
             </div>
         )
     }
 }
+
+export default timer;
 
 /*let countdown;
 const timerDisplay = document.querySelector('.display__time-left');
@@ -74,4 +76,3 @@ document.customForm.addEventListener('submit', function(e) {
     this.reset();
 });*/
 
-export default timer;

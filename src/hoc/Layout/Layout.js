@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 //import Timer from '../../Components/Timer/Timer';
-import Stats from '../../Components/Stats/Stats';
+//import Stats from '../../Components/Stats/Stats';
 //import Title from '../../Components/Title/Title';
 import Gameboard from '../../Components/Gameboard/Gameboard';
 import Fragment from '../../hoc/Fragment/Fragment';
@@ -16,7 +16,6 @@ class Layout extends Component {
         return (
             <Fragment>
                 <div className={classes.mainboard}>
-                    <Stats/>
                     <Gameboard/>
                 </div>
             </Fragment>
