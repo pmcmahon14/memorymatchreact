@@ -5,9 +5,10 @@ import {DropdownItem} from 'reactstrap';
 
 //set const as function to dynamically build menu choices with Bootstrap 4 DropdownItem
 //add classes later for each dropdown item
-const buildMenu = (props) => (
+//data-level='Daytona Driver/Driver' data-cardCount='18' data-colWidth='2'
+const buildMenu = ({label, id, handleClick}) => (
     <div>
-        <DropdownItem  onClick={props.changedLevel}>{props.label}</DropdownItem>
+        <DropdownItem  onClick={() => handleClick(id)}>{label}</DropdownItem>
     </div>
 );
 

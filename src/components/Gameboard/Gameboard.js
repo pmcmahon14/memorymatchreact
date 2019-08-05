@@ -1,95 +1,41 @@
-import React, {Component} from 'react';
+import React, {useState} from 'react';
 import {Container, Row, Col} from 'reactstrap';
 
-import Menu from '../../Container/Menu/Menu';
-//import Stats from './Stats/Stats';
-import Timer from './Timer/Timer';
-import Title from './Title/Title';
+//import Menu from '../../Container/Menu/Menu';
+//import Stats from '../Stats/Stats';
+//import Timer from './Timer/Timer';
+//import Title from './Title/Title';
+import Card from '../Card/Card';
 import classes from './Gameboard.module.css';
 
-class Gameboard extends Component {
+export default function Gameboard() {
 
-    state = {
-        levels: {
-            daytonaDriver: 0,
-            charlotteDriver: 0,
-            bristolDriver: 0,
-            daytonaCar: 0,
-            charlotteCar: 0,
-            bristolCar: 0
-        }/*,
+    const [flipped, setFlipped] = useState([]);
 
-        cardCount: {
-            daytonaDriver: 18,
-            charlotteDriver: 12,
-            bristolDriver: 8,
-            daytonaCar: 18,
-            charlotteCar: 12,
-            bristolCar: 8
-        },
+    const handleClick = id => setFlipped([id]);
 
-        width: {
-            daytonaDriver: 2,
-            charlotteDriver: 3,
-            bristolDriver: 3,
-            daytonaCar: 2,
-            charlotteCar: 3,
-            bristolCar: 3
-        }*/
-    };
-
-    changeBoard = (type) => {
-        const oldLevel = this.state.levels[type];
-        const newCount = oldLevel + 1;
-        const newLevel = {
-            ...this.state.levels
-        };
-        newLevel[type] = newCount;
-        //160@3:30 for cards and width
-        this.setState({levels: newLevel});
-
-        //const newCount = this.state.cardCount[type];
-        //const newWidth = this.state.width[type];
-        //console.log(newCount);
-        //console.log(newWidth);
-        //this.setState({levels: newLevel});
-    };
-
-    render () {
         return (
             <div>
-                <Row>
-                    <Col className={classes.stats}>
-                        <Menu changed={this.changeBoard}/>
-                    </Col>
-                    <Col>
-                        <p className={classes.stats}>Matches<br/>0</p>
-                    </Col>
-                    <Col>
-                        <p className={classes.stats}>Attempts<br/>0</p>
-                    </Col>
-                    <Col>
-                        <p className={classes.stats}>Accuracy<br/>0</p>
-                    </Col>
-                    <Col>
-                        <p className={classes.stats}>Wins<br/>0</p>
-                    </Col>
-                    <Col className={classes.stats}>
-                        <button type='button' className='btn btn-danger btn-sm'>Reset</button>
-                    </Col>
-                </Row>
-                <Timer/>
-                <Title levels={this.state.levels}/>
                 <Container fluid>
                     <Row className={classes.rowDaytona}>
                         <Col className='grow'>
                             <img className={classes.front} alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
                             {/*<img className='back' alt='cardback' src={require('../../imagebank/logo.png')}/>*/}
                         </Col>
-                        <Col className='grow'>
+                        <Col xs='2' className='grow'>
+                            <Card
+                                className={classes.front}
+                                alt='card'
+                                back={require(`../../imagebank/logo.png`)}
+                                front={require(`../../imagebank/drivers/alexbowman.png`)}
+                                flipped={flipped.includes(1)}
+                                handleClick={() => handleClick(1)}
+                                />
+                        </Col>
+                        {/*<Col className='grow'>
                             <img className='front' alt='card' src={require('../../imagebank/drivers/alexbowman.png')}/>
                             <img className={classes.back} alt='cardback' src={require('../../imagebank/logo.png')}/>
-                        </Col>
+                        </Col>*/}
                         <Col className='grow'>
                             <img className='front' alt='card' src={require('../../imagebank/drivers/chaseelliott.png')}/>
                         </Col>
@@ -146,7 +92,5 @@ class Gameboard extends Component {
                 </Container>
             </div>
         )
-    }
-};
+    };
 
-export default Gameboard;

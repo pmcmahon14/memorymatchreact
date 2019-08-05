@@ -21,7 +21,6 @@ const menu = (props) => (
             <UncontrolledDropdown size="sm">
                 <DropdownToggle caret>Menu</DropdownToggle>
                 <DropdownMenu>
-                    {/*map through levels array to generate menu*/}
                     {levels.map(lev => (
                         <BuildMenu
                             key={lev.label}

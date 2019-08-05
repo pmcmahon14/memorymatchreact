@@ -19,6 +19,7 @@ export default function card({
             <img
                 alt='card'
                 className={flipped ? 'front' : 'back'}
+                //include images as source for front and back 27
                 src={flipped ? front : back}
             />
             </div>

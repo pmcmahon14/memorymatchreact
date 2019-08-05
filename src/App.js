@@ -1,15 +1,41 @@
-import React, {Component} from 'react';
+import React, {useState, useEffect} from 'react';
 
-import Layout from './hoc/Layout/Layout';
+import Timer from './Components/Timer/Timer';
+import Stats from './Components/Stats/Stats';
+import Title from './Components/Title/Title';
+import Gameboard from './Components/Gameboard/Gameboard';
+import Fragment from './hoc/Fragment/Fragment';
+import classes from './Components/Background/Background.css';
 
-class App extends Component {
-    render () {
+import BuildDeck from './BuildDeck';
+
+export default function App() {
+    const [cards, setCards] = useState([]);
+    const [flipped, setFlipped] = useState([]);
+
+    useEffect(() => {
+        setCards(BuildDeck())
+    }, [])
+
+
+
+    const handleClick = (id) => setFlipped((flipped) => [...flipped, id])
+
         return (
-           <div>
-               <Layout/>
-           </div>
+            <Fragment>
+                <div className={classes.mainboard}>
+                    <Stats/>
+                    <Timer/>
+                    <Title/>
+                    <Gameboard
+                        cards={cards}
+                        flipped={flipped}
+                        handleClick={handleClick}
+                    />
+                    {/*<Gameboard/>*/}
+                </div>
+            </Fragment>
         )
     }
-}
 
-export default App;
+//export default App;

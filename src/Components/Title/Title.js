@@ -5,25 +5,18 @@ import classes from './Title.module.css';
 import Setup from '../Setup/Setup';
 
 //title is game level displayed in yellow bar on gameboard, styled in module.css
-const title = (props) => {
-    let changeLevel = Object.keys(props.levels)
-        .map(clKey => {
-            return [...Array(props.levels[clKey])].map((_,i) => {
-                return <Setup key={clKey+i} type={clKey} />;
-            });
-        })
-        .reduce((arr, el) => {
-            return arr.concat(el)
-        }, []);
-    if (changeLevel.length === 0) {
-        changeLevel = <p>Start your engines!</p>
-    }
+const title = (event) => {
+    const changeLevel = "Daytona Driver/Driver";
+
         return (
                 <div className={classes.Title}>
                     {changeLevel}
                 </div>
         )
     };
+
+//document.addEventListener("click", title);
+
 
 /*const title = (props) => {
     const changeLevel = Object.keys(props.levels)

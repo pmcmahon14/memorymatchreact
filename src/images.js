@@ -1,4 +1,4 @@
-export const images =
+const images =
 [
     {
         id: 1,
@@ -12,7 +12,7 @@ export const images =
     },
     {
         id: 3,
-        driver: 'imagebank/drivers/alexbowman.png',
+        driver: 'public/drivers/alexbowman.png',
         car: 'imagebank/cars/alexbowman.jpg'
     },
     {
@@ -39,7 +39,7 @@ export const images =
         id: 8,
         driver: 'imagebank/drivers/williambyron.png',
         car: 'imagebank/cars/williambyron.jpg'
-    },
+    }/*,
     {
         id: 9,
         driver: 'imagebank/drivers/landoncassill.png',
@@ -164,5 +164,7 @@ export const images =
         id: 33,
         driver: 'imagebank/drivers/bubbawallace.png',
         car: 'imagebank/cars/bubbawallace.jpg'
-    }
+    }*/
 ];
+
+export default images;

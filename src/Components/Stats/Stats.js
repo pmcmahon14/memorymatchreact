@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import {Container, Row, Col} from 'reactstrap';
-import Menu from '../../../Container/Menu/Menu';
+import Menu from '../../Container/Menu/Menu';
 import classes from './Stats.module.css';
 
 class stats extends Component {
@@ -42,21 +42,21 @@ class stats extends Component {
         }
     };
 
-    changeBoard = (type) => {
+    /*changeBoard = (type) => {
         const newLevel = this.state.levels[type];
         const newCount = this.state.cardCount[type];
         const newWidth = this.state.width[type];
         console.log(newLevel);
         console.log(newCount);
         console.log(newWidth);
-    };
+    };*/
 //dynamically generate stats like menu
     render () {
         return (
             <Container fluid>
                 <Row>
                     <Col className={classes.stats}>
-                        <Menu changeBoard={this.changeBoard}/>
+                        <Menu/>
                     </Col>
                     <Col>
                         <p className={classes.stats}>Matches<br/>0</p>
