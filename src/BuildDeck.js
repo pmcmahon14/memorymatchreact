@@ -10,10 +10,10 @@ function shuffle(array) {
     return _array
 }
 
-export default function initializeDeck() {
-    let id = 0
-    const cards = ['reactu', 'react', 'redux', 'vue',
-        'javascript', 'angular', 'ruby', 'rails'
+export default function BuildDeck() {
+    let id = 0;
+    const cards = ['alexbowman', 'chaseelliott', 'jimmiejohnson', 'austindillon',
+        'kevinharvick', 'martintruex', 'joeylogano', 'tydillon', 'aricalmirola'
     ].reduce((acc, type) => {
         acc.push(...[{
             id: id++,

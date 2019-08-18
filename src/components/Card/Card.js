@@ -7,20 +7,21 @@ export default function card({
     handleClick,
     id,
     flipped,
-    back,
-    front
+    type,
+    disabled,
+    solved
 }) {
     return (
         <div
         className={`flip-container ${flipped ? 'flipped' : ''}`}
-        onClick={() => handleClick(id)}
+        onClick={() => disabled ? null : handleClick(id)}
         >
             <div className='flipper'>
             <img
                 alt='card'
                 className={flipped ? 'front' : 'back'}
                 //include images as source for front and back 27
-                src={flipped ? front : back}
+                src={flipped || solved ? `/img/drivers/${type}.png` : '/img/logo.png'}
             />
             </div>
         </div>
@@ -31,6 +32,8 @@ card.propTypes = {
     handleClick: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     flipped: PropTypes.bool.isRequired,
+    solved: PropTypes.bool.isRequired,
     back: PropTypes.string.isRequired,
     front: PropTypes.string.isRequired,
+    disabled: PropTypes.bool.isRequired
 };
