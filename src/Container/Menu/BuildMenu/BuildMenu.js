@@ -8,7 +8,7 @@ import {DropdownItem} from 'reactstrap';
 //data-level='Daytona Driver/Driver' data-cardCount='18' data-colWidth='2'
 const buildMenu = ({label, id, handleClick}) => (
     <div>
-        <DropdownItem  onClick={() => handleClick(id)}>{label}</DropdownItem>
+        <DropdownItem onClick={handleClick}>{label}</DropdownItem>
     </div>
 );
 

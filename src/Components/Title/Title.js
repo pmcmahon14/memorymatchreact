@@ -15,34 +15,7 @@ const Title = ({currentLevel}) => {
         )
     };
 
-//document.addEventListener("click", title);
 
-
-/*const title = (props) => {
-    const changeLevel = Object.keys(props.levels)
-        .map(clKey => {
-            return [...Array(props.levels[clKey])].slice(0,1);
-        });
-    console.log(changeLevel);
-    return (
-        <div className={classes.Title}>
-            <Setup level="daytonaDriver"/>
-            {changeLevel}
-        </div>
-    )
-};
-
-/*const title = (type) => {
-    console.log(type);
-    const changeLevel = Object.keys(type);
-    console.log(changeLevel);
-
-    return (
-        <div className={classes.Title}>
-            {changeLevel}
-        </div>
-    )
-};*/
 
 const mapStateToProps = state => ({
     currentLevel: state.level.currentLevel

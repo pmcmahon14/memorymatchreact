@@ -1,0 +1,8 @@
+const StatsActionTypes = {
+    MATCH_COUNTER: 'MATCH_COUNTER',
+    ATTEMPTS_COUNTER: 'ATTEMPTS_COUNTER',
+    ACCURACY_CALCULATOR: 'ACCURACY_CALCULATOR',
+    WINS_COUNTER: 'WINS_COUNTER'
+};
+
+export default StatsActionTypes;

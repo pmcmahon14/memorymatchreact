@@ -14,7 +14,7 @@ export default function card({
     return (
         <div
         className={`flip-container ${flipped ? 'flipped' : ''}`}
-        onClick={() => disabled ? null : handleClick(id)}
+        onClick={() => (disabled ? null : handleClick(id))}
         >
             <div className='flipper'>
             <img
@@ -29,11 +29,10 @@ export default function card({
 };
 
 card.propTypes = {
+    type: PropTypes.string.isRequired,
     handleClick: PropTypes.func.isRequired,
     id: PropTypes.number.isRequired,
     flipped: PropTypes.bool.isRequired,
     solved: PropTypes.bool.isRequired,
-    back: PropTypes.string.isRequired,
-    front: PropTypes.string.isRequired,
     disabled: PropTypes.bool.isRequired
 };

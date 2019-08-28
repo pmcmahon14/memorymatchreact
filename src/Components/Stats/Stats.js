@@ -1,65 +1,20 @@
-import React, {Component} from 'react';
+import React from 'react';
+import {connect} from 'react-redux';
 
+import {matchCounter, attemptsCounter, accuracyCalculator, winsCounter} from '../../redux/stats/stats.actions';  //{addItem...}
 import {Container, Row, Col} from 'reactstrap';
 import Menu from '../../Container/Menu/Menu';
 import classes from './Stats.module.css';
 
-class stats extends Component {
-    state = {
-        stats: {
-            matches: 0,
-            attempts: 0,
-            accuracy: 0,
-            wins: 0,
-            /*other stats in pop-up*/
-        },
-
-        levels: {
-            daytonaDriver: 'Daytona Driver/Driver',
-            charlotteDriver: 'Charlotte Driver/Driver',
-            bristolDriver: 'Bristol Driver/Driver',
-            daytonaCar: 'Daytona Driver/Car',
-            charlotteCar: 'Charlotte Driver/Car',
-            bristolCar: 'Bristol Driver/Car'
-        },
-
-        cardCount: {
-            daytonaDriver: 18,
-            charlotteDriver: 12,
-            bristolDriver: 8,
-            daytonaCar: 18,
-            charlotteCar: 12,
-            bristolCar: 8
-        },
-
-        width: {
-            daytonaDriver: 2,
-            charlotteDriver: 3,
-            bristolDriver: 3,
-            daytonaCar: 2,
-            charlotteCar: 3,
-            bristolCar: 3
-        }
-    };
-
-    /*changeBoard = (type) => {
-        const newLevel = this.state.levels[type];
-        const newCount = this.state.cardCount[type];
-        const newWidth = this.state.width[type];
-        console.log(newLevel);
-        console.log(newCount);
-        console.log(newWidth);
-    };*/
-//dynamically generate stats like menu
-    render () {
-        return (
+const Stats = ({id, matchCount, matchCounter}) => (
+    <div>
             <Container fluid>
                 <Row>
                     <Col className={classes.stats}>
                         <Menu/>
                     </Col>
                     <Col>
-                        <p className={classes.stats}>Matches<br/>0</p>
+                        <p className={classes.stats} onChange={matchCounter(matchCount)}>Matches<br/>0</p>
                     </Col>
                     <Col>
                         <p className={classes.stats}>Attempts<br/>0</p>
@@ -75,8 +30,13 @@ class stats extends Component {
                     </Col>
                 </Row>
             </Container>
-        )
-    }
-}
+    </div>
+        );
 
-export default stats;
+
+
+const mapDispatchToProps = dispatch => ({
+    matchCounter: matchCount => dispatch(matchCounter(matchCount))  //addItem: item  (addItem(item))
+});
+
+export default connect(0, mapDispatchToProps)(Stats);  //

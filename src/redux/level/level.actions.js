@@ -1,4 +1,6 @@
+import LevelActionTypes from './level.types';
+
 export const setCurrentLevel = level => ({
-    type: 'SET_CURRENT_LEVEL',
+    type: LevelActionTypes.SET_CURRENT_LEVEL,
     payload: level
 });
